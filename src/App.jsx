@@ -145,7 +145,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const whatsappMessage = encodeURIComponent(
-    "Hi, I am interested in booking Gorgeous Airy Rooms with Sea View. Please send me more information."
+    "Hi, I am interested in booking Ekuthuleni Modern Christian Guesthouse. Please send me more information."
   );
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
@@ -162,7 +162,7 @@ function App() {
     <>
       <header className="navbar">
         <a className="brand" href="#home" aria-label="Go to homepage">
-          <span>Gorgeous Airy Rooms</span>
+          <span>Ekuthuleni Modern Christian Guesthouse</span>
           <small>with Sea View</small>
         </a>
 
@@ -263,10 +263,7 @@ function App() {
           <div className="about-grid">
             <div className="about-copy">
               <p>
-                Gorgeous Airy Rooms with Sea View offers guests a comfortable
-                base for a quiet getaway. The bright spaces and relaxed
-                atmosphere make it suitable for short holidays, weekend stays
-                and coastal visits.
+                Ekuthuleni Modern Christian Guesthouse offers guests a peaceful coastal retreat with modern accommodation, breathtaking sea views, and a warm Christian atmosphere. Whether you're visiting for business or leisure, you'll enjoy comfort, hospitality, and a relaxing stay in the heart of La Lucia.
               </p>
 
               <p>
@@ -469,7 +466,7 @@ function App() {
 
       <footer>
         <div>
-          <strong>Gorgeous Airy Rooms with Sea View</strong>
+          <strong><strong>Ekuthuleni Modern Christian Guesthouse</strong></strong>
           <p>A bright and relaxing coastal stay.</p>
         </div>
 
@@ -483,7 +480,7 @@ function App() {
         </div>
 
         <p className="copyright">
-          © {new Date().getFullYear()} Gorgeous Airy Rooms with Sea View
+          © {new Date().getFullYear()} Ekuthuleni Modern Christian Guesthouse
         </p>
       </footer>
 
