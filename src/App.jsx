@@ -20,67 +20,67 @@ const whatsappNumber = "27 82 416 6496";
 
 const galleryImages = [
   {
-    src: "public/images/614328359.jpg",
+    src: "/images/614328359.jpg",
     alt: "Bright and spacious holiday accommodation interior",
   },
   {
-    src: "public/images/entrance.jpg",
+    src: "/images/entrance.jpg",
     alt: "Modern bedroom inside the holiday accommodation",
   },
   {
-    src: "public/images/apartment-balcony.jpg",
+    src: "/images/apartment-balcony.jpg",
     alt: "Comfortable lounge and seating area",
   },
   {
-    src: "public/images/apartment-lounge.jpg",
+    src: "/images/apartment-lounge.jpg",
     alt: "Modern coastal living space",
   },
   {
-    src: "public/images/braai-area..jpg",
+    src: "/images/braai-area..jpg",
     alt: "Exterior of stylish holiday accommodation",
   },
   {
-    src: "public/images/sea-view.jpg",
+    src: "/images/sea-view.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/bathroom-2.jpg",
+    src: "/images/bathroom-2.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/bathroom.jpg",
+    src: "/images/bathroom.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/bedroom.jpg",
+    src: "/images/bedroom.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/deck-1.jpg",
+    src: "/images/deck-1.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/deck-2.jpg",
+    src: "/images/deck-2.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/house-front.jpg",
+    src: "/images/house-front.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "public/images/kitchen.jpg",
+    src: "/images/kitchen.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
     {
-    src: "public/images/Pool.jpg",
+    src: "/images/Pool.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 ];
