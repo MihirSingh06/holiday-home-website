@@ -511,6 +511,13 @@ img {
   background: #e8f1ef;
 }
 
+.booking-section .eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
 .booking-section h2 {
   max-width: 850px;
   margin: 0 auto;
@@ -669,12 +676,16 @@ footer p {
 .corporate-content h2 {
   max-width: 750px;
   margin: 0 0 28px;
+  color: var(--white);
   font-family: "Playfair Display", serif;
   font-size: clamp(2.7rem, 5vw, 4.8rem);
   font-weight: 600;
   line-height: 1.08;
 }
 
+.corporate-content .eyebrow {
+  color: #9edfe3;
+}
 .corporate-content > p:not(.eyebrow) {
   max-width: 720px;
   color: rgba(255, 255, 255, 0.76);
