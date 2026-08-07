@@ -636,6 +636,56 @@ footer p {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.corporate-section {
+  position: relative;
+  padding: 120px 8%;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(
+      120deg,
+      rgba(9, 31, 38, 0.98),
+      rgba(23, 107, 122, 0.92)
+    );
+}
+
+.corporate-section::after {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 450px;
+  height: 450px;
+  content: "";
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.corporate-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.corporate-content h2 {
+  max-width: 750px;
+  margin: 0 0 28px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.corporate-content > p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.corporate-button {
+  margin-top: 22px;
+}
+
 @media (max-width: 1000px) {
   .about-grid,
   .location-section {
@@ -661,6 +711,14 @@ footer p {
 }
 
 @media (max-width: 760px) {
+
+  .corporate-section {
+  padding: 85px 6%;
+}
+
+.corporate-content h2 {
+  font-size: 2.7rem;
+}
   .navbar {
     padding: 17px 5%;
   }

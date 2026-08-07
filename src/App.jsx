@@ -191,6 +191,11 @@ function App() {
           <a href="#location" onClick={() => setMenuOpen(false)}>
             Location
           </a>
+
+          <a href="#corporate" onClick={() => setMenuOpen(false)}>
+            Corporate
+          </a>
+
           <a
             className="nav-book-button"
             href={bookingUrl}
@@ -435,6 +440,45 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
+
+          <motion.section
+  className="corporate-section"
+  id="corporate"
+  initial={{ opacity: 0, y: 45 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true, amount: 0.2 }}
+>
+  <div className="corporate-content">
+    <p className="eyebrow">Corporate Stays</p>
+
+    <h2>Comfortable accommodation for business travellers</h2>
+
+    <p>
+      Ekuthuleni Modern Christian Guesthouse welcomes corporate and business
+      travellers looking for comfortable accommodation in La Lucia.
+      Our convenient location provides easy access to Umhlanga Ridge and
+      surrounding business areas while offering a peaceful place to relax
+      after a busy day.
+    </p>
+
+    <p>
+      Corporate guests can use our dedicated booking platform to view
+      availability, rates and accommodation options.
+    </p>
+
+    <a
+      className="primary-button corporate-button"
+      href="https://site.nightsbridge.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Corporate Bookings
+    </a>
+  </div>
+</motion.section>
+
+
           <p className="eyebrow">Plan your stay</p>
           <h2>Ready for a relaxing coastal getaway?</h2>
           <p>
