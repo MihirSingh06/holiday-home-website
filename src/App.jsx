@@ -479,7 +479,7 @@ function App() {
 </motion.section>
 
 
-          <p className="eyebrow">Plan your stay</p>
+          
           <h2>Ready for a relaxing coastal getaway?</h2>
           <p>
             Check the latest prices, available dates and booking conditions on
