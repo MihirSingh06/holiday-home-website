@@ -108,6 +108,51 @@ const amenities = [
   },
 ];
 
+const reviews = [
+  {
+    title: "Absolutely AMAZING!!",
+    rating: 5,
+    date: "11 May 2026",
+    text:
+      "Everything. Beautiful house, beautiful area, extremely peaceful, extremely clean, not to mention the love of the host 🥺❤️ I felt at home, I felt like she was my mom ❤️",
+  },
+  {
+    title: "I stayed for work and the hosts were so accommodating",
+    rating: 5,
+    date: "13 May 2026",
+    text:
+      "The view was beautiful and everything was so clean. Valarie and the lady working there were so helpful and caring, which makes the stay so much easier. The bed was also very comfortable and the rooms are so spacious. This was a fantastic stay.",
+  },
+  {
+    title: "Ekuthuleni lives up to its name",
+    rating: 5,
+    date: "",
+    text:
+      "Ekuthuleni lives up to its name. It’s beautiful, clean and serene — definitely will be coming back soon. The accommodation was clean, accessible and ideal for a family.",
+  },
+  {
+    title: "Exceptional",
+    rating: 5,
+    date: "12 May 2025",
+    text:
+      "Keep up the good work and best service please because you are my best place ever for my family. I enjoyed my stay and am coming again for more days.",
+  },
+  {
+    title: "More than a 5 star 🌟",
+    rating: 5,
+    date: "22 December 2024",
+    text:
+      "Just wow. We will most definitely return. The owner and staff went the extra mile to assist with an extra bed for our grandbaby. The view is to die for — a great place to hide away from the hustle and bustle.",
+  },
+  {
+    title: "Exceptional",
+    rating: 5,
+    date: "1 January 2024",
+    text:
+      "Our stay at Ekuthuleni Guesthouse was amazing! My partner and I really enjoyed our stay, so much that we requested to extend it. The facilities and home were top notch and exactly as seen in the pictures. Everything you need is catered for. The location and nearby amenities made our stay easy and comfortable. The breathtaking sea view from our bed was incredible. Vallerie and her staff were humble and welcoming hosts. Ekuthuleni Christian Guesthouse truly feels like a home away from home.",
+  },
+];
+
 const nearbyAttractions = [
   {
     icon: <FaUmbrellaBeach />,
@@ -188,6 +233,10 @@ function App() {
           <a href="#amenities" onClick={() => setMenuOpen(false)}>
             Amenities
           </a>
+          <a href="#reviews" onClick={() => setMenuOpen(false)}>
+            Reviews
+          </a>
+
           <a href="#location" onClick={() => setMenuOpen(false)}>
             Location
           </a>
@@ -353,6 +402,61 @@ function App() {
             ))}
           </div>
         </motion.section>
+
+        <motion.section
+  className="reviews-section"
+  id="reviews"
+  initial={{ opacity: 0, y: 45 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true, amount: 0.15 }}
+>
+  <div className="section-heading reviews-heading">
+    <p className="eyebrow dark">Guest Experiences</p>
+    <h2>What our guests have to say</h2>
+    <p>
+      Real guest feedback highlighting the comfort, views, cleanliness and
+      hospitality at Ekuthuleni.
+    </p>
+  </div>
+
+  <div className="reviews-grid">
+    {reviews.map((review, index) => (
+      <motion.article
+        className="review-card"
+        key={`${review.title}-${index}`}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="review-stars">
+          {"★".repeat(review.rating)}
+        </div>
+
+        <h3>{review.title}</h3>
+
+        <p className="review-text">“{review.text}”</p>
+
+        <div className="review-footer">
+          {review.date && <span>Reviewed {review.date}</span>}
+          <span>Booking.com guest review</span>
+        </div>
+      </motion.article>
+    ))}
+  </div>
+
+  <div className="reviews-link">
+    <a
+      href={bookingUrl}
+      target="_blank"
+      rel="noreferrer"
+      className="text-link"
+    >
+      View more reviews on Booking.com →
+    </a>
+  </div>
+</motion.section>
 
         <motion.section
   className="location-section"
