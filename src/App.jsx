@@ -83,9 +83,7 @@ const galleryImages = [
     src: "/images/8872d648-c4a3-491b-82e9-57c73d2d1440.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
-git add .
-git commit -m "Add new property image"
-git push origin main
+  
 ];
 
 const amenities = [
