@@ -32,7 +32,7 @@ const galleryImages = [
     alt: "Comfortable lounge and seating area",
   },
   {
-    src: "/images/apartment-lounge.jpg",
+    src: "/images/07a46fdd-c761-493f-bf0f-5279db74a04c.jpg",
     alt: "Modern coastal living space",
   },
   {
@@ -55,7 +55,7 @@ const galleryImages = [
   },
 
   {
-    src: "/images/bedroom.jpg",
+    src: "/images/ChatGPT Image Aug 11, 2026, 07_54_52 PM.png",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
@@ -75,12 +75,12 @@ const galleryImages = [
   },
 
   {
-    src: "/images/kitchen.jpg",
+    src: "/images/570a8e60-92cb-4aa2-9c59-f8214f893417.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
     {
-    src: "/images/Pool.jpg",
+    src: "/images/8872d648-c4a3-491b-82e9-57c73d2d1440.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 ];
