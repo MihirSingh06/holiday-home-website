@@ -28,7 +28,7 @@ const galleryImages = [
     alt: "Modern bedroom inside the holiday accommodation",
   },
   {
-    src: "/images/apartment-balcony.jpg",
+    src: "/images/614328332.jpg",
     alt: "Comfortable lounge and seating area",
   },
   {
@@ -80,6 +80,11 @@ const galleryImages = [
   },
 
     {
+    src: "/images/8872d648-c4a3-491b-82e9-57c73d2d1440.jpg",
+    alt: "Beautiful ocean and beach near the accommodation",
+  },
+
+  {
     src: "/images/8872d648-c4a3-491b-82e9-57c73d2d1440.jpg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
