@@ -953,6 +953,17 @@ footer p {
 
 @media (max-width: 760px) {
 
+  .amenities-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.amenity-card {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+}
+
   body {
   overflow-x: hidden;
 }
