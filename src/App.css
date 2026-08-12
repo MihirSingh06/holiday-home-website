@@ -953,6 +953,94 @@ footer p {
 
 @media (max-width: 760px) {
 
+  body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  padding: 14px 5%;
+}
+
+.brand span {
+  font-size: 1rem;
+}
+
+.brand small {
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+}
+
+.hero {
+  min-height: 88vh;
+  padding: 115px 6% 70px;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 13vw, 4.5rem);
+  line-height: 1;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.section-heading h2,
+.location-copy h2,
+.booking-section h2,
+.corporate-content h2 {
+  font-size: clamp(2.2rem, 10vw, 3.2rem);
+}
+
+.gallery-item {
+  min-height: 210px;
+}
+
+.map-container,
+.map-container iframe {
+  min-height: 380px;
+}
+
+.whatsapp-button {
+  right: 18px;
+  bottom: 18px;
+}
+
+.lightbox {
+  padding: 18px;
+}
+
+.lightbox img {
+  max-width: 94vw;
+  max-height: 78vh;
+}
+
+.lightbox-prev {
+  left: 10px;
+}
+
+.lightbox-next {
+  right: 10px;
+}
+
+.lightbox-nav {
+  width: 44px;
+  height: 44px;
+  font-size: 2rem;
+}
+
+.lightbox-close {
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+}
+
   .corporate-popup {
   padding: 38px 24px 28px;
 }
