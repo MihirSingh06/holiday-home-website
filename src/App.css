@@ -953,6 +953,16 @@ footer p {
 
 @media (max-width: 760px) {
 
+  .nearby-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.nearby-card {
+  width: 100%;
+  min-width: 0;
+}
+
   .amenities-grid {
   grid-template-columns: 1fr;
   gap: 16px;
@@ -1320,4 +1330,21 @@ footer p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .nearby-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nearby-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
 }
