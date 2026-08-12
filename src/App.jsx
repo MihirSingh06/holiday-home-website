@@ -190,6 +190,23 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [corporateBooking, setCorporateBooking] = useState({
+  companyName: "",
+  email: "",
+  checkIn: "",
+  checkOut: "",
+  guests: 1,
+});
+
+const handleCorporateChange = (event) => {
+  const { name, value } = event.target;
+
+  setCorporateBooking((current) => ({
+    ...current,
+    [name]: value,
+  }));
+};
+
   const whatsappMessage = encodeURIComponent(
     "Hi, I am interested in booking Ekuthuleni Modern Christian Guesthouse. Please send me more information."
   );
@@ -557,29 +574,99 @@ function App() {
   <div className="corporate-content">
     <p className="eyebrow">Corporate Stays</p>
 
-    <h2>Comfortable accommodation for business travellers</h2>
+<h2>Book your corporate stay</h2>
 
-    <p>
-      Ekuthuleni Modern Christian Guesthouse welcomes corporate and business
-      travellers looking for comfortable accommodation in La Lucia.
-      Our convenient location provides easy access to Umhlanga Ridge and
-      surrounding business areas while offering a peaceful place to relax
-      after a busy day.
-    </p>
+<p>
+  Ekuthuleni Modern Christian Guesthouse welcomes companies and business
+  travellers looking for comfortable accommodation in La Lucia.
+</p>
 
-    <p>
-      Corporate guests can use our dedicated booking platform to view
-      availability, rates and accommodation options.
-    </p>
+<form className="corporate-form">
+  <div className="corporate-form-grid">
+    <div className="form-group">
+      <label htmlFor="companyName">Company Name</label>
+      <input
+        id="companyName"
+        name="companyName"
+        type="text"
+        value={corporateBooking.companyName}
+        onChange={handleCorporateChange}
+        placeholder="Enter company name"
+      />
+    </div>
 
-    <a
-      className="primary-button corporate-button"
-      href="https://site.nightsbridge.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Corporate Bookings
-    </a>
+    <div className="form-group">
+      <label htmlFor="email">Contact Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        value={corporateBooking.email}
+        onChange={handleCorporateChange}
+        placeholder="name@company.com"
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="checkIn">Check-in</label>
+      <input
+        id="checkIn"
+        name="checkIn"
+        type="date"
+        value={corporateBooking.checkIn}
+        onChange={handleCorporateChange}
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="checkOut">Check-out</label>
+      <input
+        id="checkOut"
+        name="checkOut"
+        type="date"
+        min={corporateBooking.checkIn}
+        value={corporateBooking.checkOut}
+        onChange={handleCorporateChange}
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="guests">Guests</label>
+      <input
+        id="guests"
+        name="guests"
+        type="number"
+        min="1"
+        value={corporateBooking.guests}
+        onChange={handleCorporateChange}
+      />
+    </div>
+  </div>
+
+<button
+  className="primary-button corporate-button"
+  type="button"
+  onClick={() => {
+    if (
+      !corporateBooking.companyName ||
+      !corporateBooking.email ||
+      !corporateBooking.checkIn ||
+      !corporateBooking.checkOut
+    ) {
+      alert(
+        "Please complete the company name, email, check-in and check-out fields."
+      );
+      return;
+    }
+
+    alert(
+      "Corporate booking portal coming soon. NightsBridge integration is pending."
+    );
+  }}
+>
+  Check Availability
+</button>
+</form>
   </div>
 </motion.section>
 
