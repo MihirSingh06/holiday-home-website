@@ -198,6 +198,8 @@ function App() {
   guests: 1,
 });
 
+const [showCorporatePopup, setShowCorporatePopup] = useState(false);
+
 const handleCorporateChange = (event) => {
   const { name, value } = event.target;
 
@@ -659,9 +661,8 @@ const handleCorporateChange = (event) => {
       return;
     }
 
-    alert(
-      "Corporate booking portal coming soon. NightsBridge integration is pending."
-    );
+setShowCorporatePopup(true);
+
   }}
 >
   Check Availability
@@ -730,6 +731,59 @@ const handleCorporateChange = (event) => {
         <FaWhatsapp />
         <span>WhatsApp</span>
       </a>
+
+      {showCorporatePopup && (
+  <div
+    className="corporate-popup-overlay"
+    onClick={() => setShowCorporatePopup(false)}
+  >
+    <motion.div
+      className="corporate-popup"
+      initial={{ opacity: 0, scale: 0.92, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        className="corporate-popup-close"
+        type="button"
+        aria-label="Close corporate booking message"
+        onClick={() => setShowCorporatePopup(false)}
+      >
+        ×
+      </button>
+
+      <p className="eyebrow dark">Corporate Bookings</p>
+
+      <h2>Let us assist with your stay</h2>
+
+      <p>
+        Thank you for your interest in Ekuthuleni Modern Christian Guesthouse.
+         We’re currently experiencing technical difficulties with online bookings. 
+         Our team will be happy to assist you with availability and corporate rates.
+      </p>
+
+      <div className="corporate-popup-actions">
+        <a
+          className="primary-button"
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contact us on WhatsApp
+        </a>
+
+        <button
+          className="popup-secondary-button"
+          type="button"
+          onClick={() => setShowCorporatePopup(false)}
+        >
+          Close
+        </button>
+      </div>
+    </motion.div>
+  </div>
+)}
 
       <AnimatePresence>
         {selectedImage && (
