@@ -16,7 +16,7 @@ import "./App.css";
 const bookingUrl =
   "https://www.booking.com/hotel/za/gorgeous-airy-rooms-with-seaview.en-gb.html";
 
-const whatsappNumber = "27 82 416 6496";
+const whatsappNumber = "27824166496";
 
 const galleryImages = [
   {
