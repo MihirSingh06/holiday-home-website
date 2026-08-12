@@ -198,6 +198,30 @@ function App() {
   guests: 1,
 });
 
+const showNextImage = () => {
+  if (!selectedImage) return;
+
+  const currentIndex = galleryImages.findIndex(
+    (image) => image.src === selectedImage.src
+  );
+
+  const nextIndex = (currentIndex + 1) % galleryImages.length;
+  setSelectedImage(galleryImages[nextIndex]);
+};
+
+const showPreviousImage = () => {
+  if (!selectedImage) return;
+
+  const currentIndex = galleryImages.findIndex(
+    (image) => image.src === selectedImage.src
+  );
+
+  const previousIndex =
+    (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+
+  setSelectedImage(galleryImages[previousIndex]);
+};
+
 const [showCorporatePopup, setShowCorporatePopup] = useState(false);
 
 const handleCorporateChange = (event) => {
@@ -215,13 +239,32 @@ const handleCorporateChange = (event) => {
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  useEffect(() => {
-    document.body.style.overflow = selectedImage ? "hidden" : "";
+useEffect(() => {
+  document.body.style.overflow = selectedImage ? "hidden" : "";
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selectedImage]);
+  const handleKeyDown = (event) => {
+    if (!selectedImage) return;
+
+    if (event.key === "ArrowRight") {
+      showNextImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showPreviousImage();
+    }
+
+    if (event.key === "Escape") {
+      setSelectedImage(null);
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    document.body.style.overflow = "";
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [selectedImage]);
 
   return (
     <>
@@ -803,6 +846,18 @@ setShowCorporatePopup(true);
               <FaTimes />
             </button>
 
+            <button
+  type="button"
+  className="lightbox-nav lightbox-prev"
+  onClick={(event) => {
+    event.stopPropagation();
+    showPreviousImage();
+  }}
+  aria-label="Previous image"
+>
+  ‹
+</button>
+
             <motion.img
               src={selectedImage.src}
               alt={selectedImage.alt}
@@ -812,6 +867,18 @@ setShowCorporatePopup(true);
               transition={{ duration: 0.3 }}
               onClick={(event) => event.stopPropagation()}
             />
+
+            <button
+  type="button"
+  className="lightbox-nav lightbox-next"
+  onClick={(event) => {
+    event.stopPropagation();
+    showNextImage();
+  }}
+  aria-label="Next image"
+>
+  ›
+</button>
           </motion.div>
         )}
       </AnimatePresence>
