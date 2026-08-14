@@ -19,6 +19,13 @@ const bookingUrl =
 const whatsappNumber = "27824166496";
 
 const galleryImages = [
+
+  {
+    src: "/images/WhatsApp Image 2026-08-14 at 11.38.54.jpeg",
+    alt: "Beautiful ocean and beach near the accommodation",
+  },
+
+
   {
     src: "/images/614328359.jpg",
     alt: "Bright and spacious holiday accommodation interior",
@@ -65,12 +72,17 @@ const galleryImages = [
   },
 
   {
-    src: "/images/deck-2.jpg",
+    src: "/images/ChatGPT Image Aug 14, 2026, 12_05_19 PM.png",
+    alt: "Beautiful ocean and beach near the accommodation",
+  },  
+
+  {
+    src: "/images/WhatsApp Image 2026-08-14 at 11.38.54 (2).jpeg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
   {
-    src: "/images/house-front.jpg",
+    src: "/images/WhatsApp Image 2026-08-14 at 11.38.55.jpeg",
     alt: "Beautiful ocean and beach near the accommodation",
   },
 
@@ -84,6 +96,12 @@ const galleryImages = [
     alt: "Beautiful ocean and beach near the accommodation",
   },
   
+
+  {
+    src: "/images/house-front.jpg",
+    alt: "Beautiful ocean and beach near the accommodation",
+  },
+
 ];
 
 const amenities = [
