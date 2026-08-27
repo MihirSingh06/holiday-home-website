@@ -205,6 +205,9 @@ const reveal = {
 };
 
 function App() {
+
+  const siteTemporarilyOffline = true;
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -215,6 +218,7 @@ function App() {
   checkOut: "",
   guests: 1,
 });
+
 
 const showNextImage = () => {
   if (!selectedImage) return;
@@ -283,6 +287,24 @@ useEffect(() => {
     window.removeEventListener("keydown", handleKeyDown);
   };
 }, [selectedImage]);
+
+if (siteTemporarilyOffline) {
+  return (
+    <main className="site-offline">
+      <div className="site-offline-card">
+        <p className="offline-eyebrow">
+          Ekuthuleni Modern Christian Guesthouse
+        </p>
+
+        <h1>Website temporarily unavailable</h1>
+
+        <p>
+          This website is temporarily unavailable. Please check back again soon.
+        </p>
+      </div>
+    </main>
+  );
+}
 
   return (
     <>

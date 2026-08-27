@@ -1347,4 +1347,62 @@ footer p {
     min-width: 0;
     box-sizing: border-box;
   }
+
 }
+  /* Temporary website unavailable page */
+.site-offline {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(rgba(8, 30, 37, 0.82), rgba(8, 30, 37, 0.82)),
+    url("/images/house-front.jpg") center / cover no-repeat;
+}
+
+.site-offline-card {
+  width: min(680px, 100%);
+  padding: 48px 36px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  background: rgba(8, 30, 37, 0.78);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.site-offline-card h1 {
+  margin: 10px 0 18px;
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  line-height: 1.05;
+}
+
+.site-offline-card > p:last-child {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.offline-eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 600px) {
+  .site-offline-card {
+    padding: 38px 22px;
+  }
+
+  .site-offline-card h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
