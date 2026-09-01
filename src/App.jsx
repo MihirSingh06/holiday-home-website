@@ -206,7 +206,7 @@ const reveal = {
 
 function App() {
 
-  const siteTemporarilyOffline = true;
+  const siteTemporarilyOffline = false;
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
