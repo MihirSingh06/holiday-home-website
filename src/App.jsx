@@ -13,8 +13,7 @@ import {
 } from "react-icons/fa";
 import "./App.css";
 
-const bookingUrl =
-  "https://www.booking.com/hotel/za/gorgeous-airy-rooms-with-seaview.en-gb.html";
+const bookingUrl = "https://book.nightsbridge.com/19207";
 
 const whatsappNumber = "27824166496";
 
@@ -434,7 +433,7 @@ if (siteTemporarilyOffline) {
                 target="_blank"
                 rel="noreferrer"
               >
-                View the Booking.com listing →
+                Check availability →
               </a>
             </div>
 
@@ -728,28 +727,15 @@ if (siteTemporarilyOffline) {
     </div>
   </div>
 
-<button
+<a
   className="primary-button corporate-button"
-  type="button"
-  onClick={() => {
-    if (
-      !corporateBooking.companyName ||
-      !corporateBooking.email ||
-      !corporateBooking.checkIn ||
-      !corporateBooking.checkOut
-    ) {
-      alert(
-        "Please complete the company name, email, check-in and check-out fields."
-      );
-      return;
-    }
-
-setShowCorporatePopup(true);
-
-  }}
+  href={bookingUrl}
+  target="_blank"
+  rel="noreferrer"
 >
   Check Availability
-</button>
+</a>
+
 </form>
   </div>
 </motion.section>
@@ -758,8 +744,10 @@ setShowCorporatePopup(true);
           
           <h2>Ready for a relaxing coastal getaway?</h2>
           <p>
-            Check the latest prices, available dates and booking conditions on
-            Booking.com.
+       <p>
+  Check the latest prices, available dates and booking conditions through
+  our online booking system.
+</p>
           </p>
 
           <div className="booking-actions">
@@ -769,7 +757,7 @@ setShowCorporatePopup(true);
               target="_blank"
               rel="noreferrer"
             >
-              Book on Booking.com
+             Book Now
             </a>
 
             <a
@@ -795,7 +783,7 @@ setShowCorporatePopup(true);
           <a href="#amenities">Amenities</a>
           <a href="#location">Location</a>
           <a href={bookingUrl} target="_blank" rel="noreferrer">
-            Booking.com
+  Book Now
           </a>
         </div>
 
